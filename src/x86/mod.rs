@@ -16,6 +16,10 @@ pub mod idt;
 #[cfg(feature = "alloc")]
 pub mod apic;
 
+#[cfg(feature = "alloc")]
+pub mod paging;
+pub mod registers;
+
 pub mod int {
     use core::arch::asm;
     pub fn interrupts_disabled() -> bool {
